@@ -50,10 +50,10 @@ print('''Election Results
 --------------------------
 Total Votes: %d
 --------------------------
-Khan: %.3f (%d) 
-Correy: %.3f (%d)
-Li: %.3f (%d)
-O'Tooley: %.3f (%d)
+Khan: %.3f%% (%d) 
+Correy: %.3f%% (%d)
+Li: %.3f%% (%d)
+O'Tooley: %.3f%% (%d)
 ---------------------------
 Winner: %s
 ---------------------------
@@ -67,10 +67,10 @@ with open('PyPoll/pypoll.txt', 'w') as text:
 --------------------------
 Total Votes: %d
 --------------------------
-Khan: %.3f (%d) 
-Correy: %.3f (%d)
-Li: %.3f (%d)
-O'Tooley: %.3f (%d)
+Khan: %.3f%% (%d) 
+Correy: %.3f%% (%d)
+Li: %.3f%% (%d)
+O'Tooley: %.3f%% (%d)
 ---------------------------
 Winner: %s
 ---------------------------
