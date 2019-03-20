@@ -15,32 +15,36 @@ count=0
 
 with open(election_csv, newline="") as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
+
+ # skipping the header   
     csv_header = next(csvreader)
+
  # reading through each row
     for row in csvreader:
 
-      #counting the number of rows without the header  
+      #counting the number of rows   
       count = count + 1     
    
-      # Creating a list with dates by appending each value in the date column as a string
+      # Creating a list with cantidates by appending each value in the candidate column as a string
       candidates.append(row[2])
 
-      # Creating a list with profits/losses by appending each value in the P/L column as a string
-      #.append(int(row[1]))
-
+#Creatig a list with candidate unique names
 unique_candidates=list(set(candidates))
 
-
+# Adding number of votes and '%'s to the two lists initialized in the beginning using the unique candidates names
 for x in unique_candidates:
 
       candidate_numbers.append(candidates.count(x))
       candidate_percentage.append(candidates.count(x)/count*100)
-print(candidate_percentage)
+
+#creating numbers and percentages dictionaries with the candidates as keys
 candidates_numbers_dict=dict(zip(unique_candidates,candidate_numbers))
 candidates_percentage_dict=dict(zip(unique_candidates,candidate_percentage))
-print(candidates_numbers_dict)
+
+
+#mapping using candidates numbers dictionary to print the Key paring the value with the highest number of observations
 winners_name=max(candidates_numbers_dict, key=lambda x: candidates_numbers_dict[x])
-print(winners_name)
+
 
 print('''Election Results
 --------------------------
