@@ -41,6 +41,9 @@ for x in unique_candidates:
 candidates_numbers_dict=dict(zip(unique_candidates,candidate_numbers))
 candidates_percentage_dict=dict(zip(unique_candidates,candidate_percentage))
 
+#create a dictionary that has key-value pairs arranged by candidates numbers
+
+#Extract an ordered unique candidate list from the preceeding dictionary
 
 #mapping using candidates numbers dictionary to print the Key paring the value with the highest number of observations
 winners_name=max(candidates_numbers_dict, key=lambda x: candidates_numbers_dict[x])
